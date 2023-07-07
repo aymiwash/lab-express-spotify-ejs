@@ -5,9 +5,6 @@ const expressLayouts = require("express-ejs-layouts");
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
-const bodyParser = require("body-parser");
-// 2. let know your app you will be using it
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // require spotify-web-api-node package here:
 const spotifyApi = new SpotifyWebApi({
@@ -40,6 +37,7 @@ app.get("/", (request, response) => {
   response.render("home");
 });
 
+//Getting the search request and rendering a results page
 app.get("/artist-search", async (request, response) => {
   try {
     const body = request.query;
@@ -54,6 +52,7 @@ app.get("/artist-search", async (request, response) => {
   }
 });
 
+//Getting the albums page
 app.get("/albums/:artistId", async (request, response) => {
   try {
     const artistId = request.params.artistId;
@@ -64,12 +63,12 @@ app.get("/albums/:artistId", async (request, response) => {
   }
 });
 
+//Getting the tracks of the album
 app.get("/tracks/:albumId", async (request, response) => {
   try {
     const albumId = request.params.albumId;
     const albumTracks = await spotifyApi.getAlbumTracks(albumId);
-    console.log(albumTracks.body);
-response.render("tracks", {tracks : albumTracks.body.items})
+    response.render("tracks", { tracks: albumTracks.body.items });
   } catch (err) {
     console.log("The error while searching album's tracks occurred: ", err);
   }
