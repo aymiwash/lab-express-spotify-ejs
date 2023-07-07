@@ -1,7 +1,86 @@
 body{
-    background-color: grey;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-image: url("/images/galaxy_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;
+    font-family: "Roboto", Arial, sans-serif;
+    color: white;
+}
+
+#nav_bar{
+width: 100vw;
+height: 80px;
+font-size: 2rem;
+background-color: rgba(0, 0, 0, 0.583);
+display: flex;
+align-items: center;
+position: fixed;
+}
+
+#nav_bar ul {
+ margin: 0 auto;
+ padding: 0 30px;
+ width: 100vw;
+ display: flex;
+ justify-content: space-between;
+}
+
+#nav_bar ul li {
+    list-style: none;
+}
+
+#nav_bar ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#nav_bar ul li a:hover{
+   text-shadow:#c78691 0 0 10px;
+}
+
+.artist_search{
+    border: none;
+    background-color:#fdfbe5;
+}
+.artist_search:focus{
+    border: none;
+    box-shadow:#c78691 0 0 10px ;
+    background-color:#fdfbe5;
+}
+
+.search_button{
+    background: none;
 }
 
 .spotifyImg{
     width: 200px
+}
+
+#home_search{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.home_form{
+    width: 700px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #141533a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_form h1{
+    color: #fdfbe5;
+
 }
