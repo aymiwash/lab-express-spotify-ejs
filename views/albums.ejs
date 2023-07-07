@@ -1,0 +1,18 @@
+<h1>Albums</h1>
+
+<ul>
+
+    <% albums.forEach(album => { %>
+     <li>
+        <h3><%- album.name  %></h3>
+        
+        <% if (album.images[0]?.url) { %>
+            <img src="<%- album.images[0]?.url %>" alt="album cover" class="spotifyImg">
+           <% }else{%>
+            <p>No cover available</p>
+           <%} %>
+        
+       <a href="/tracks/<%- album.id %>"><button>View Tracks</button></a>
+    </li>
+    <% }) %>
+</ul>
