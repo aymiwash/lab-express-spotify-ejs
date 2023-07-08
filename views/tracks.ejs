@@ -1,15 +1,18 @@
+<div class="page">
+  <div class="tracks_container">
+    <h1 class="tracks_container_h1">Tracks</h1>
 
-<h1>Tracks</h1>
-
-<ul>
-    <% tracks.forEach(tracks => { %>
-        <li>
-           <h3><%- tracks.name  %></h3>
-           <% if (tracks.preview_url) { %>
-            <audio src="<%- tracks.preview_url %>" controls></audio>
-           <% }else{%>
-            <p>No preview available</p>
-           <%} %>
-       </li>
-       <% }) %>
-</ul>
+    <ul class="tracks_results">
+      <% tracks.forEach(tracks => { %>
+      <li>
+        <h3><%- tracks.name %></h3>
+        <% if (tracks.preview_url) { %>
+        <audio src="<%- tracks.preview_url %>" controls class="track_preview"></audio>
+        <% }else{%>
+        <p class="not_available">No preview available</p>
+        <%} %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

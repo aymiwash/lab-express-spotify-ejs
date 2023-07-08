@@ -1,23 +1,24 @@
-<h1>Albums</h1>
-
-<ul>
-  <% albums.forEach(album => { %>
-  <li>
-    <% if (album.images[0]?.url) { %>
-
-    <a href="/tracks/<%- album.id %>">
-      <img
-        src="<%- album.images[0]?.url %>"
-        alt="album cover"
-        class="spotifyImg"
-      />
-    </a>
-
-    <% }else{%>
-    <p>No cover available</p>
-    <%} %>
-    <h3 class="title_search"><%- album.name %></h3>
-    <a href="/tracks/<%- album.id %>"><button>View Tracks</button></a>
-  </li>
-  <% }) %>
-</ul>
+<div id="albums_page" class="page">
+  <div class="albums_container">
+    <h1 class="albums_container_h1">Albums</h1>
+    <ul class="albums_result">
+      <% albums.forEach(album => { %>
+      <li>
+        <% if (album.images[0]?.url) { %>
+        <a href="/tracks/<%- album.id %>">
+          <img
+            src="<%- album.images[0]?.url %>"
+            alt="album cover"
+            class="spotifyImg"
+          />
+        </a>
+        <% }else{%>
+        <p class="not_available">No cover available</p>
+        <%} %>
+        <h3 class="title_search"><%- album.name %></h3>
+        <a href="/tracks/<%- album.id %>"><button class="buttons">View Tracks</button></a>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

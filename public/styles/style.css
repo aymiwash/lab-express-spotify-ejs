@@ -10,9 +10,20 @@ body {
   color: #f8f3eb;
 }
 
+.spotifyImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.not_available{
+color: rgba(128, 128, 128, 0.722);
+}
+
 /*NAV BAR*/
 
 #nav_bar {
+  top: 0px;
   width: 100vw;
   height: 80px;
   font-size: 2rem;
@@ -44,37 +55,41 @@ body {
   text-shadow: #c78691 0 0 10px;
 }
 
-.artist_search {
+.search_area label{
+display: flex;
+}
+
+.artist_search_input {
+  display: block;
   border: none;
   height: 25px;
   width: 200px;
-  padding-left: 40px;
-  background-color: #fdfbe5;
+  padding-left: 10px;
+  background-color: #fefdf5;
   border-radius: 10px;
-  background-size: 19px;
-  background-position: 5%;
-  background-image: url("/images/loupe.png");
-  background-repeat: no-repeat;
+  border:solid 2px #c78691;
 }
 
-.artist_search::after {
-  background-color: red;
-}
-
-.artist_search:focus {
+.artist_search_input:focus {
   box-shadow: #c78691 0 0 5px;
   outline: none;
 }
 
 .search_button {
-  background: none;
-  border: none;
-  outline: none;
+  display: block;
+  background-color: #fefdf5;
+  width: 30px;
+  height: 27px;
+  border-radius: 10px;
+  background-position: 50%;
+  background-size: 19px;
+  background-image: url("/images/loupe.png");
+  background-repeat: no-repeat;
+  border:solid 2px #c78691;
+  margin-left: 5px;
 }
 
-.spotifyImg {
-  width: 200px;
-}
+
 /*HOME*/
 
 #home_search_page {
@@ -100,32 +115,37 @@ body {
   text-shadow: #c78691 0 0 5px;
 }
 
-/*SEARCH RESULT PAGE*/
+/*SEARCH RESULT PAGE AND ALBUMS PAGE*/
 
-#search_result_page {
+.page {
   width: 100vw;
   display: flex;
   justify-content: center;
-
 }
 
-.search_result_container {
+.search_result_container,
+.albums_container,
+.tracks_container {
   width: 80vw;
 }
 
-.search_result_h1 {
+.search_result_h1,
+.albums_container_h1,
+.tracks_container_h1 {
   margin: 0;
   padding-top: 150px;
-  text-shadow:#f7e6c4 0 0 10px;
+  text-shadow: #f7e6c4 0 0 10px;
 }
 
-.artists_result{
+.artists_result,
+.albums_result {
   display: flex;
   flex-wrap: wrap;
 }
 
-.artists_result li{
-  background-color:#141533a6 ;
+.artists_result li,
+.albums_result li {
+  background-color: #141533a6;
   border-radius: 10px;
   width: 260px;
   margin: 15px;
@@ -133,11 +153,56 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
-.title_search{
+.title_search {
   text-align: center;
   color: #f8f3eb;
-  text-shadow:#c78691 0 0 10px;
+  text-shadow: #c78691 0 0 10px;
   text-decoration: none;
+  padding: 15px 10px;
+  line-height: 30px;
+}
+
+/*TRACKS*/
+
+.tracks_results {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.tracks_results li {
+  background-color: #141533a6;
+  border-radius: 40px;
+  list-style: none;
+  display: flex;
+  margin: 10px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.track_preview {
+  background-color: red;
+  border-radius: 25px;
+  background: linear-gradient(to left, #007db5, #ff8a00);
+  box-shadow: #c78691 0 0 10px;
+}
+
+.buttons{
+  background-color: #fefdf5;
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 15px;
+  border:solid 2px #c78691;
+  color: #293d67cb;
+  font-size: 0.9rem;
+}
+
+/*FOOTER*/
+
+footer{
+padding: 10px;
+color: #f7e6c4;
 }

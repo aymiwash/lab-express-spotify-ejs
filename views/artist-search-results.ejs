@@ -1,4 +1,4 @@
-<div id="search_result_page">
+<div id="search_result_page" class="page">
 <div class="search_result_container">
   <h1 class="search_result_h1">Search result :</h1>
   <ul class="artists_result">
@@ -13,10 +13,10 @@
         />
       </a>
       <% }else{%>
-      <p>No photo available</p>
+      <p class="not_available">No photo available</p>
       <%} %>
     <a href="/albums/<%- artist.id%>" class="title_search"> <h3 ><%- artist.name %></h3> </a> 
-      <a href="/albums/<%- artist.id%>"><button>View Albums</button></a>
+      <a href="/albums/<%- artist.id%>"><button class="buttons">View Albums</button></a>
     </li>
     <% }) %>
   </ul>
