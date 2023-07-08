@@ -42,7 +42,7 @@ app.get("/artist-search", async (request, response) => {
   try {
     const body = request.query;
     const artistsSearch = await spotifyApi.searchArtists(body.artist);
-    console.log("The received data from the API: ", artistsSearch.body);
+    console.log("The received data from the API: ", artistsSearch);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     response.render("artist-search-results", {
       artists: artistsSearch.body.artists.items,

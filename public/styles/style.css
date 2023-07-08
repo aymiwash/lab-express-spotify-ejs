@@ -1,86 +1,143 @@
-body{
-    margin: 0 auto;
-    padding: 0 auto;
-    background-image: url("/images/galaxy_background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 25%;
-    font-family: "Roboto", Arial, sans-serif;
-    color: white;
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  background-image: url("/images/galaxy_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 25%;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #f8f3eb;
 }
 
-#nav_bar{
-width: 100vw;
-height: 80px;
-font-size: 2rem;
-background-color: rgba(0, 0, 0, 0.583);
-display: flex;
-align-items: center;
-position: fixed;
+/*NAV BAR*/
+
+#nav_bar {
+  width: 100vw;
+  height: 80px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.583);
+  display: flex;
+  align-items: center;
+  position: fixed;
 }
 
 #nav_bar ul {
- margin: 0 auto;
- padding: 0 30px;
- width: 100vw;
- display: flex;
- justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav_bar ul li {
-    list-style: none;
+  list-style: none;
 }
 
-#nav_bar ul li a{
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+#nav_bar ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #f8f3eb;
 }
 
-#nav_bar ul li a:hover{
-   text-shadow:#c78691 0 0 10px;
+#nav_bar ul li a:hover {
+  text-shadow: #c78691 0 0 10px;
 }
 
-.artist_search{
-    border: none;
-    background-color:#fdfbe5;
-}
-.artist_search:focus{
-    border: none;
-    box-shadow:#c78691 0 0 10px ;
-    background-color:#fdfbe5;
-}
-
-.search_button{
-    background: none;
-}
-
-.spotifyImg{
-    width: 200px
+.artist_search {
+  border: none;
+  height: 25px;
+  width: 200px;
+  padding-left: 40px;
+  background-color: #fdfbe5;
+  border-radius: 10px;
+  background-size: 19px;
+  background-position: 5%;
+  background-image: url("/images/loupe.png");
+  background-repeat: no-repeat;
 }
 
-#home_search{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.artist_search::after {
+  background-color: red;
 }
 
-
-
-.home_form{
-    width: 700px;
-    height: 300px;
-    border-radius: 15px;
-    background-color: #141533a6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.artist_search:focus {
+  box-shadow: #c78691 0 0 5px;
+  outline: none;
 }
 
-.home_form h1{
-    color: #fdfbe5;
+.search_button {
+  background: none;
+  border: none;
+  outline: none;
+}
 
+.spotifyImg {
+  width: 200px;
+}
+/*HOME*/
+
+#home_search_page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_form {
+  width: 700px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #141533a6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_form h1 {
+  text-shadow: #c78691 0 0 5px;
+}
+
+/*SEARCH RESULT PAGE*/
+
+#search_result_page {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search_result_container {
+  width: 80vw;
+}
+
+.search_result_h1 {
+  margin: 0;
+  padding-top: 150px;
+  text-shadow:#f7e6c4 0 0 10px;
+}
+
+.artists_result{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artists_result li{
+  background-color:#141533a6 ;
+  border-radius: 10px;
+  width: 260px;
+  margin: 15px;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_search{
+  text-align: center;
+  color: #f8f3eb;
+  text-shadow:#c78691 0 0 10px;
+  text-decoration: none;
 }

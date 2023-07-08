@@ -1,11 +1,8 @@
-
 <h1>Albums</h1>
 
 <ul>
   <% albums.forEach(album => { %>
   <li>
-    <h3><%- album.name %></h3>
-
     <% if (album.images[0]?.url) { %>
 
     <a href="/tracks/<%- album.id %>">
@@ -19,7 +16,7 @@
     <% }else{%>
     <p>No cover available</p>
     <%} %>
-
+    <h3 class="title_search"><%- album.name %></h3>
     <a href="/tracks/<%- album.id %>"><button>View Tracks</button></a>
   </li>
   <% }) %>
