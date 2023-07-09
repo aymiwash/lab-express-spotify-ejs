@@ -57,7 +57,7 @@ app.get("/albums/:artistId", async (request, response) => {
   try {
     const artistId = request.params.artistId;
     const artistAlbums = await spotifyApi.getArtistAlbums(artistId);
-    response.render("albums", { albums: artistAlbums.body.items });
+    response.render("albums", { albums: artistAlbums.body });
   } catch (err) {
     console.log("The error while searching artist's albums occurred: ", err);
   }
@@ -68,7 +68,7 @@ app.get("/tracks/:albumId", async (request, response) => {
   try {
     const albumId = request.params.albumId;
     const albumTracks = await spotifyApi.getAlbumTracks(albumId);
-    response.render("tracks", { tracks: albumTracks.body.items });
+    response.render("tracks", { tracks: albumTracks.body });
   } catch (err) {
     console.log("The error while searching album's tracks occurred: ", err);
   }

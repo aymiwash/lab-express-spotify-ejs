@@ -1,9 +1,9 @@
 <div class="page">
   <div class="tracks_container">
-    <h1 class="tracks_container_h1">Tracks</h1>
+    <h1 class="tracks_container_h1"><a href="/albums/<%- tracks.items[0].artists[0].id%>" >←</a> Tracks</h1>
 
-    <ul class="tracks_results">
-      <% tracks.forEach(tracks => { %>
+    <ol class="tracks_results">
+      <% tracks.items.forEach(tracks => { %>
       <li>
         <h3><%- tracks.name %></h3>
         <% if (tracks.preview_url) { %>
@@ -13,6 +13,6 @@
         <%} %>
       </li>
       <% }) %>
-    </ul>
+    </ol>
   </div>
 </div>

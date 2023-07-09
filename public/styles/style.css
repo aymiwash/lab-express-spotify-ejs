@@ -16,8 +16,8 @@ body {
   object-fit: cover;
 }
 
-.not_available{
-color: rgba(128, 128, 128, 0.722);
+.not_available {
+  color: rgba(128, 128, 128, 0.722);
 }
 
 /*NAV BAR*/
@@ -55,8 +55,8 @@ color: rgba(128, 128, 128, 0.722);
   text-shadow: #c78691 0 0 10px;
 }
 
-.search_area label{
-display: flex;
+.search_area label {
+  display: flex;
 }
 
 .artist_search_input {
@@ -67,7 +67,7 @@ display: flex;
   padding-left: 10px;
   background-color: #fefdf5;
   border-radius: 10px;
-  border:solid 2px #c78691;
+  border: solid 2px #c78691;
 }
 
 .artist_search_input:focus {
@@ -78,17 +78,17 @@ display: flex;
 .search_button {
   display: block;
   background-color: #fefdf5;
-  width: 30px;
-  height: 27px;
-  border-radius: 10px;
+  width: 35px;
+  height: 31px;
+  border-radius: 15px;
   background-position: 50%;
   background-size: 19px;
   background-image: url("/images/loupe.png");
   background-repeat: no-repeat;
-  border:solid 2px #c78691;
+  border: solid 2px #c78691;
   margin-left: 5px;
+  cursor: pointer;
 }
-
 
 /*HOME*/
 
@@ -113,6 +113,7 @@ display: flex;
 
 .home_form h1 {
   text-shadow: #c78691 0 0 5px;
+  margin-bottom: 60px;
 }
 
 /*SEARCH RESULT PAGE AND ALBUMS PAGE*/
@@ -137,14 +138,13 @@ display: flex;
   text-shadow: #f7e6c4 0 0 10px;
 }
 
-.artists_result,
-.albums_result {
+.artists_result {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.artists_result li,
-.albums_result li {
+.artists_result li {
   background-color: #141533a6;
   border-radius: 10px;
   width: 260px;
@@ -156,7 +156,7 @@ display: flex;
   justify-content: space-around;
 }
 
-.title_search {
+.artist_name {
   text-align: center;
   color: #f8f3eb;
   text-shadow: #c78691 0 0 10px;
@@ -165,21 +165,70 @@ display: flex;
   line-height: 30px;
 }
 
+/*ALBUMS*/
+
+.albums_result {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.albums_result li {
+  background-color: #141533a6;
+  border-radius: 10px;
+  width: 80vw;
+  margin: 15px;
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+.albums_result li img {
+  padding: 0 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.albums_result li .button_area {
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.albums_container_h1 a,
+.tracks_container_h1 a {
+  cursor: pointer;
+  color: #f8f3eb;
+  text-decoration: none;
+}
+.album_name {
+  text-align: center;
+  color: #f8f3eb;
+  text-shadow: #60a8bf 0 0 10px;
+  text-decoration: none;
+  padding: 15px 10px;
+  line-height: 30px;
+  font-size: 1rem;
+}
+
 /*TRACKS*/
 
 .tracks_results {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .tracks_results li {
   background-color: #141533a6;
   border-radius: 40px;
-  list-style: none;
   display: flex;
+  align-items: center;
+  width: 60vw;
   margin: 10px;
-  padding: 20px;
+  padding: 10px 25px;
   justify-content: space-between;
 }
 
@@ -190,19 +239,23 @@ display: flex;
   box-shadow: #c78691 0 0 10px;
 }
 
-.buttons{
+.buttons {
   background-color: #fefdf5;
   height: 30px;
   border-radius: 10px;
   padding: 0 15px;
-  border:solid 2px #c78691;
+  border: solid 2px #c78691;
   color: #293d67cb;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 /*FOOTER*/
 
-footer{
-padding: 10px;
-color: #f7e6c4;
+footer {
+  padding: 10px;
+  color: #f7e6c4;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
 }
